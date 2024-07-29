@@ -28,7 +28,7 @@ const Navbar = () => {
     <div
       className={
         navbar
-          ? 'bg-green-700 w-full h-20 lg:h-24 text-white transition-all duration-300 fixed top-0 left-0 right-0 z-30'
+          ? 'opacity-90 bg-white shadow-lg w-full h-20 lg:h-24 text-black transition-all duration-300 fixed top-0 left-0 right-0 z-30'
           : 'bg-white z-30'
       }
     >
@@ -84,8 +84,8 @@ const Navbar = () => {
         </nav>
         {/* Mobile Menu */}
         <div
-          className={`space-y-4 px-4 z-[29] pt-24 pb-5 bg-green-700 ${
-            isMenuOpen ? 'block fixed top-0 right-0 left-0' : 'hidden'
+          className={`space-y-4 px-0 z-[21] mt-20 pb-5 bg-[#1F1F1F] ${
+            isMenuOpen ? 'block text-white fixed top-0 right-0 left-0' : 'hidden'
           }`}
         >
           {NAV_LINKS.map((link) => (
@@ -99,7 +99,7 @@ const Navbar = () => {
               smooth={true}
               key={link.key}
               to={link.path}
-              className="regular-16 block text-white cursor-pointer pb-1.5 transition-all hover:font-bold"
+              className="regular-16 block py-3 px-6 hover:bg-green-500 hover:py-3 hover:px-6 cursor-pointer transition-all hover:font-bold"
               onClick={toggleMenu}
             >
               {link.label}
