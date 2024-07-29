@@ -100,6 +100,7 @@ const Navbar = () => {
               key={link.key}
               to={link.path}
               className="regular-16 block text-white cursor-pointer pb-1.5 transition-all hover:font-bold"
+              onClick={toggleMenu}
             >
               {link.label}
             </LinkNav>
