@@ -1,6 +1,6 @@
 // NAVIGATION
 export const NAV_LINKS = [
-    { path: '#', key: 'home', label: 'Home' },
+    { path: 'hero', key: 'home', label: 'Home' },
     { path: 'camp', key: 'camp', label: 'Camp' },
     { path: 'guide', key: 'guide', label: 'Guide' },
     { path: 'features', key: 'features ', label: 'Features ' },

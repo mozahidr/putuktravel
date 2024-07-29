@@ -4,7 +4,7 @@ import Button from './Button';
 
 const Hero = () => {
   return (
-    <section className="max-container mt-24 padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+    <section className="max-container mt-24 padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row" id='hero'>
       <div className="hero-map" />
 
       {/* Left side */}
