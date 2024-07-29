@@ -98,7 +98,6 @@ const Footer = () => {
               <Button
                 type="button"
                 title="Accept all cookies"
-                icon=""
                 variant="btn_blue"
               />
             </div>

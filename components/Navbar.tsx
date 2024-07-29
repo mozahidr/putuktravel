@@ -6,7 +6,7 @@ import { Link as LinkNav } from 'react-scroll';
 import Link from 'next/link';
 import Button from './Button';
 import { CgMenuRightAlt } from 'react-icons/cg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoCloseOutline } from 'react-icons/io5';
 
 const Navbar = () => {
@@ -17,10 +17,12 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen); //
   };
 
-  const changeBackground = () => {
-    window.scrollY >= 150 ? setNavbar(true) : setNavbar(false);
-  };
-  window.addEventListener('scroll', changeBackground);
+  useEffect(() => {
+    const changeBackground = () => {
+      window.scrollY >= 150 ? setNavbar(true) : setNavbar(false);
+    };
+    window.addEventListener('scroll', changeBackground);
+  }, []);
 
   return (
     <div
