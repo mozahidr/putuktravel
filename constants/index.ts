@@ -1,10 +1,11 @@
 // NAVIGATION
 export const NAV_LINKS = [
-    { href: '/', key: 'home', label: 'Home' },
-    { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
-    { href: '/', key: 'services', label: 'Services' },
-    { href: '/', key: 'pricing ', label: 'Pricing ' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
+    { path: '/', key: 'home', label: 'Home' },
+    { path: 'camp', key: 'camp', label: 'Camp' },
+    { path: 'guide', key: 'guide', label: 'Guide' },
+    { path: 'features', key: 'features ', label: 'Features ' },
+    { path: 'getapp', key: 'getapp ', label: 'Get App ' },
+    { path: 'contact', key: 'contact_us', label: 'Contact Us' },
   ];
   
   // CAMP SECTION
@@ -69,8 +70,8 @@ export const NAV_LINKS = [
   export const FOOTER_CONTACT_INFO = {
     title: 'Contact Us',
     links: [
-      { label: 'Admin Officer', value: '123-456-7890' },
-      { label: 'Email Officer', value: 'hilink@akinthil.com' },
+      { label: 'Admin Officer:', value: '123-456-7890' },
+      { label: 'Email Officer:', value: 'hilink@example.com' },
     ],
   };
   

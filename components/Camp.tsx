@@ -1,3 +1,6 @@
+'use client';
+
+import { ReactTyped } from 'react-typed';
 import { PEOPLE_URL } from '@/constants';
 import Image from 'next/image';
 
@@ -16,6 +19,7 @@ const CampSite = ({
   return (
     <div
       className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl`}
+      id="camp"
     >
       <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
         <div className="flexCenter gap-4">
@@ -66,10 +70,15 @@ const Camp = () => {
         />
       </div>
       {/* Pop Up */}
-      <div className="flexEnd mt-10 px-6 lg:-mt-60 lg:mr-6">
-        <div className="bg-green-50 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl">
-          <h2 className="regular-24 md:regular-32 2xl:regular-64 capitalize text-white">
-            <strong>Feeling Lost and not knowing</strong> The way?
+      <div className="flexEnd mt-8 px-6 lg:-mt-60 lg:mr-6">
+        <div className="bg-green-50 p-8 min-h-[300px] lg:min-h-[350px] lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl">
+          <h2 className="regular-24 md:regular-32 2xl:regular-40 capitalize text-white">
+            <ReactTyped
+              strings={["Feeling Lost and not knowing The way?"]}     
+              typeSpeed={130}
+              backSpeed={90}
+              loop
+            />
           </h2>
           <p className="regular-14 xl:regular-16 mt-5 text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
@@ -77,12 +86,12 @@ const Camp = () => {
             nulla explicabo inventore quasi consequatur, culpa labore repellat
             ducimus deleniti dignissimos veritatis?
           </p>
-          <Image 
-            src='/quote.svg'
-            alt='camp-2'
+          <Image
+            src="/quote.svg"
+            alt="camp-2"
             width={186}
             height={219}
-            className='camp-quote'
+            className="camp-quote"
           />
         </div>
       </div>

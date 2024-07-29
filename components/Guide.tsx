@@ -1,10 +1,20 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '@/constants/variants';
 
 const Guide = () => {
   return (
-    <section className="flexCenter flex-col">
-      <div className="padding-container max-container w-full pb-24">
+    <section className="flexCenter flex-col" id='guide'>
+      <motion.div 
+        className="padding-container max-container w-full pb-24"
+        variants={fadeIn('right', 0.3)}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+      >
         <Image src="/camp.svg" alt="camp" width={50} height={50} />
         <p className="uppercase regular-18 -mt-1 mb-3 text-green-50">
           we are here for you
@@ -21,7 +31,7 @@ const Guide = () => {
             the mountain
           </p>
         </div>
-      </div>
+      </motion.div>
 
       <div className="flexCenter max-container relative w-full">
         <Image
@@ -32,12 +42,12 @@ const Guide = () => {
           className="w-full object-cover object-center 2xl:rounded-5xl"
         />
         <div className="absolute flex bg-white py-8 pl-5 pr-7 gap-3 rounded-3xl border shadow-md md:left-[5%] lg:top-20">
-          <Image 
-            src='/meter.svg'
-            alt='meter'
+          <Image
+            src="/meter.svg"
+            alt="meter"
             width={16}
             height={158}
-            className='h-full w-auto'
+            className="h-full w-auto"
           />
           <div className="flexBetween flex-col">
             <div className="w-full flex flex-col">
@@ -48,8 +58,10 @@ const Guide = () => {
               <p className="bold-20 mt-2">Aguas Calientes</p>
             </div>
             <div className="w-full flex flex-col">
-                <p className="regular-16 text-gray-20">Start track</p>
-                <h4 className='bold-20 mt-2 whitespace-nowrap'>Wonorejo Pasuruan</h4>
+              <p className="regular-16 text-gray-20">Start track</p>
+              <h4 className="bold-20 mt-2 whitespace-nowrap">
+                Wonorejo Pasuruan
+              </h4>
             </div>
           </div>
         </div>

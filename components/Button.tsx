@@ -6,6 +6,7 @@ type ButtonProps = {
   icon?: string;
   variant: string;
   full?: boolean;
+  onClick?: void;
 };
 
 const Button = ({ type, title, icon, full, variant }: ButtonProps) => {
